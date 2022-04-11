@@ -41,7 +41,6 @@ namespace oop_pharmacy
                 {
                     MedList.Add(item);
                 }
-
             }
 
         }

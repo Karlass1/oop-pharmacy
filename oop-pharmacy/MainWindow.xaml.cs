@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,15 +24,14 @@ namespace oop_pharmacy
         public MainWindow()
         {
             InitializeComponent();
+            ComboDose.ItemsSource = Enum.GetValues(typeof(Medication.MedDoseType));
+            ComboPacking.ItemsSource = Enum.GetValues(typeof(Medication.MedPackingType));
         }
 
-        private void Import_click(object sender, RoutedEventArgs e)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Pharmacy.GetPharmacy().ImportData("test.csv");
-        }
-        private void Export_click(object sender, RoutedEventArgs e)
-        {
-            Pharmacy.GetPharmacy().ExportData("testExp.csv");
+            CreateMedWindow createWin = new CreateMedWindow();
+            createWin.Show();
         }
     }
 }

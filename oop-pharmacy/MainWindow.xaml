@@ -10,21 +10,22 @@
         <local:ViewModel/>
     </Window.DataContext>
     <Grid>
-        <Button Content="Import" HorizontalAlignment="Left" Margin="111,350,0,0" VerticalAlignment="Top" Width="75" Click="Import_click"/>
-        <Button Content="Export" HorizontalAlignment="Left" Margin="232,350,0,0" VerticalAlignment="Top" Width="75" Click="Export_click"/>
-        <DataGrid HorizontalAlignment="Left" Height="219" Margin="63,55,0,0" VerticalAlignment="Top" Width="678" AutoGenerateColumns="False" ItemsSource="{Binding Array}">
+        <Button Content="Import" HorizontalAlignment="Left" Margin="111,350,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ImportCommand}"/>
+        <Button Content="Export" HorizontalAlignment="Left" Margin="232,350,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ExportCommand}"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="353,350,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
+        <DataGrid HorizontalAlignment="Left" Height="219" Margin="60,66,0,0" VerticalAlignment="Top" Width="678" AutoGenerateColumns="False" ItemsSource="{Binding Array,UpdateSourceTrigger=PropertyChanged}">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Dose}"/>
-                <DataGridTextColumn Binding="{Binding DoseType}"/>
-                <DataGridTextColumn Binding="{Binding Name}"/>
-                <DataGridTextColumn Binding="{Binding ActiveSubstance}"/>
-                <DataGridTextColumn Binding="{Binding ActiveSubstanceAmount}"/>
-                <DataGridTextColumn Binding="{Binding PackingAmount}"/>
-                <DataGridTextColumn Binding="{Binding PackingType}"/>
-                <DataGridTextColumn Binding="{Binding Manufacturer}"/>
-                <DataGridTextColumn Binding="{Binding ExpirationDate}"/>
-                <DataGridTextColumn Binding="{Binding Dose}"/>
-                <DataGridCheckBoxColumn Binding="{Binding OverTheCounter}"/>
+                <DataGridTextColumn Header="Medication Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Active substance" Binding="{Binding ActiveSubstance}"/>
+                <DataGridTextColumn Header="Active Substance Amount" Binding="{Binding ActiveSubstanceAmount}"/>
+                <DataGridTextColumn Header="Dose" Binding="{Binding Dose}"/>
+                <DataGridComboBoxColumn Header="Dose Type" SelectedValueBinding="{Binding DoseType}" x:Name="ComboDose"/>
+                <DataGridTextColumn Header="Packing amount" Binding="{Binding PackingAmount}"/>
+                <DataGridComboBoxColumn Header="Packing type" SelectedValueBinding="{Binding PackingType}" x:Name="ComboPacking"/>
+                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"/>
+                <DataGridTextColumn Header="Expiration date" Binding="{Binding ExpirationDate}"/>
+                <DataGridCheckBoxColumn Header="Over the counter" Binding="{Binding OverTheCounter}"/>
             </DataGrid.Columns>
 
         </DataGrid>

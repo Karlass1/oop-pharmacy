@@ -21,41 +21,45 @@ namespace oop_pharmacy
             pcs
         }
 
-        [Index(8)]
+        [Index(9)]
         public MedDoseType DoseType { get; set; }
 
-        [Index(9)]
+        [Index(10)]
         public MedPackingType PackingType { get; set; }
 
         [Index(0)]
-        public int Dose { get; set; }
+        public int Id { get; set; }
 
         [Index(1)]
-        public string Name { get; set; }
+        public int Dose { get; set; }
 
         [Index(2)]
-        public string ActiveSubstance { get; set; }
+        public string Name { get; set; }
 
         [Index(3)]
-        public int ActiveSubstanceAmount { get; set; }
+        public string ActiveSubstance { get; set; }
 
         [Index(4)]
-        public int PackingAmount { get; set; }
+        public int ActiveSubstanceAmount { get; set; }
 
         [Index(5)]
-        public string Manufacturer { get; set; }
+        public int PackingAmount { get; set; }
 
         [Index(6)]
-        public DateTime ExpirationDate { get; set; }
+        public string Manufacturer { get; set; }
 
         [Index(7)]
+        public DateTime ExpirationDate { get; set; }
+
+        [Index(8)]
         public bool OverTheCounter { get; set; }
 
-        public Medication(int dose, string name, string activeSubstance,
+        public Medication(int id, int dose, string name, string activeSubstance,
             int activeSubstanceAmount, int packingAmount, string manufacturer,
             DateTime expirationDate, bool overTheCounter,
             MedDoseType doseType, MedPackingType packingType)
         {
+            Id = id;
             Dose = dose;
             Name = name;
             ActiveSubstance = activeSubstance;
