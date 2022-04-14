@@ -28,5 +28,18 @@ namespace oop_pharmacy
         {
             this.Close();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var tb = (TextBox)sender;
+            if (tb.Text == tb.Tag.ToString())
+            {
+                tb.Foreground = Brushes.LightGray;
+            }
+            else
+            {
+                tb.Foreground = Brushes.Black;
+            }            
+        }
     }
 }

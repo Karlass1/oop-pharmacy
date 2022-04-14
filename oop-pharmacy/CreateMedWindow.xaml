@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:oop_pharmacy"
         mc:Ignorable="d"
         Title="CreateMedWindow" Height="487.333" Width="800">
-    <Grid>
+    <Grid Margin="0,0,3.333,9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -21,7 +21,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -35,17 +35,29 @@
         <Label Content="Manufacturer:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="7" Grid.Column="0"/>
         <Label Content="Expiration date:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="8" Grid.Column="0"/>
         <Label Content="Over the counter:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="9" Grid.Column="0"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="0" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="1" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="2" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="3" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="4" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="5" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="6" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="7" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="8" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Row="9" Grid.Column="1"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Height="19" Margin="128,12.333,0,0" Grid.Row="10" VerticalAlignment="Top" Width="112" Click="CloseWindowClick"/>
-        <Button Content="Create" HorizontalAlignment="Left" Height="19" Margin="149.333,10.333,0,0" Grid.Row="10" VerticalAlignment="Top" Width="112" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Tag="Name" Text="Name" VerticalAlignment="Top" Width="296" Grid.Row="0" Grid.Column="1" Foreground="LightGray"
+ TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Tag="Active substance" Text="Active substance" VerticalAlignment="Top" Width="296" Grid.Row="1" Grid.Column="1" Foreground="LightGray"
+ TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Tag="Active substance amount" Text="Active substance amount" VerticalAlignment="Top" Width="296" Grid.Row="2" Grid.Column="1" Foreground="LightGray"
+ TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Tag="Dose" Text="Dose" VerticalAlignment="Top" Width="296" Grid.Row="3" Grid.Column="1" Foreground="LightGray"
+ TextChanged="TextBox_TextChanged"/>
+        <ComboBox HorizontalAlignment="Left" Height="31" SelectedIndex="0" VerticalAlignment="Top" Width="296" Grid.Row="4" Grid.Column="1">
+            <ComboBoxItem Content="ml"></ComboBoxItem>
+            <ComboBoxItem Content="pcs"></ComboBoxItem>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Tag="Packing amount" Text="Packing amount" VerticalAlignment="Top" Width="296" Grid.Row="5" Grid.Column="1" Foreground="LightGray"
+ TextChanged="TextBox_TextChanged"/>
+        <ComboBox HorizontalAlignment="Left" Height="31" SelectedIndex="0" VerticalAlignment="Top" Width="296" Grid.Row="6" Grid.Column="1">
+            <ComboBoxItem Content="ml"></ComboBoxItem>
+            <ComboBoxItem Content="pcs"></ComboBoxItem>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Tag="Manufacturer" Text="Manufacturer" VerticalAlignment="Top" Width="296" Grid.Row="7" Grid.Column="1" Foreground="LightGray"
+ TextChanged="TextBox_TextChanged"/>
+        <Calendar HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="8" Grid.Column="1"/>
+        <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="9" Grid.Column="1"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="129,8.333,0,0" Grid.Row="10" VerticalAlignment="Top" Width="112" Click="CloseWindowClick" Grid.Column="0"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="149.667,8.333,0,0" Grid.Row="10" VerticalAlignment="Top" Width="112" Grid.Column="1"/>
     </Grid>
 </Window>
