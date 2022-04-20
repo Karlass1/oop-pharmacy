@@ -28,7 +28,7 @@ namespace oop_pharmacy
         public MedPackingType PackingType { get; set; }
 
         [Index(0)]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Index(1)]
         public int Dose { get; set; }
@@ -54,7 +54,7 @@ namespace oop_pharmacy
         [Index(8)]
         public bool OverTheCounter { get; set; }
 
-        public Medication(int id, int dose, string name, string activeSubstance,
+        public Medication(Guid id, int dose, string name, string activeSubstance,
             int activeSubstanceAmount, int packingAmount, string manufacturer,
             DateTime expirationDate, bool overTheCounter,
             MedDoseType doseType, MedPackingType packingType)

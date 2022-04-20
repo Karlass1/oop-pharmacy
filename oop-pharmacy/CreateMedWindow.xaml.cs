@@ -22,24 +22,14 @@ namespace oop_pharmacy
         public CreateMedWindow()
         {
             InitializeComponent();
+            ComboDose.ItemsSource = Enum.GetValues(typeof(Medication.MedDoseType));
+            ComboPacking.ItemsSource = Enum.GetValues(typeof(Medication.MedPackingType));
+            this.DataContext = MainWindow.SharedModel;
         }
 
         private void CloseWindowClick(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var tb = (TextBox)sender;
-            if (tb.Text == tb.Tag.ToString())
-            {
-                tb.Foreground = Brushes.LightGray;
-            }
-            else
-            {
-                tb.Foreground = Brushes.Black;
-            }            
         }
     }
 }

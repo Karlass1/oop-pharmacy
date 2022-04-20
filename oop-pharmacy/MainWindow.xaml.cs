@@ -21,11 +21,15 @@ namespace oop_pharmacy
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static ViewModel SharedModel { get; protected set; }
+
         public MainWindow()
         {
             InitializeComponent();
             ComboDose.ItemsSource = Enum.GetValues(typeof(Medication.MedDoseType));
             ComboPacking.ItemsSource = Enum.GetValues(typeof(Medication.MedPackingType));
+            SharedModel = new ViewModel();
+            this.DataContext = SharedModel;
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
