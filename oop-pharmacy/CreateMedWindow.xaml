@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oop_pharmacy"
         mc:Ignorable="d"
-        Title="CreateMedWindow" Height="530" Width="800">
-    <Grid Margin="0,0,3.333,9" RenderTransformOrigin="0.452,0.498">
+        Title="Create Medicament" Height="530" Width="800">
+    <Grid Background="#DCF4F1" Margin="0,0,3.333,9" RenderTransformOrigin="0.452,0.498">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="73*"/>

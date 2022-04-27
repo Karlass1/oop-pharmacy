@@ -56,5 +56,14 @@ namespace oop_pharmacy
                 csv.WriteRecords(MedList);
             }
         }
+
+
+        public void FilterData(string filterName)
+        {
+            var filteredData = MedList.Where(Medication => Medication.Name.ToLower().Contains("filterName"));
+            //dgMedication.ItemsSource = null;
+            //dgMedication.ItemsSource = filteredData.ToList();
+
+        }
     }
 }

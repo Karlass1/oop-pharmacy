@@ -5,12 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oop_pharmacy"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Pharmacy" Height="500" Width="1000" Icon="Images/medIcon.ico">
     <Grid>
-        <Button Content="Import" HorizontalAlignment="Left" Margin="111,350,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ImportCommand}"/>
-        <Button Content="Export" HorizontalAlignment="Left" Margin="232,350,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ExportCommand}"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="353,350,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
-        <DataGrid HorizontalAlignment="Left" Height="219" Margin="60,66,0,0" VerticalAlignment="Top" Width="678" AutoGenerateColumns="False" ItemsSource="{Binding Array,UpdateSourceTrigger=PropertyChanged}">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Right" 
+          AlignmentY="Bottom" Stretch="UniformToFill" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="280*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Import" HorizontalAlignment="Left" Margin="50,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Command="{Binding ImportCommand}" FontSize="16" RenderTransformOrigin="0.666,1.054" Grid.ColumnSpan="2"/>
+        <Button Content="Export" HorizontalAlignment="Left" Margin="122,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Command="{Binding ExportCommand}" FontSize="14" RenderTransformOrigin="1.155,0.166" Grid.Column="1"/>
+        <Button Content="Add" HorizontalAlignment="Center" Margin="0,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Click="AddButton_Click" FontSize="14" Grid.Column="3"/>
+        <DataGrid x:Name="dgMedication" Background="#DCF4F1" AlternationCount="2" AlternatingRowBackground="#DCF4F1"
+                  HorizontalAlignment="Left" Height="320" Margin="50,66,0,0" VerticalAlignment="Top" Width="900" AutoGenerateColumns="False" ItemsSource="{Binding Array,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="4">
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Delete from database" Command="{Binding DeleteCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=PlacementTarget.SelectedItem}"/>
@@ -31,5 +42,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <Label Content="Search:" HorizontalAlignment="Left" Margin="162,19,0,0" VerticalAlignment="Top" Height="36" Width="68" FontSize="14" Grid.Column="1"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="22" FontSize="14" TextChanged="tbSearch_TextChanged" Grid.ColumnSpan="2" Grid.Column="2"/>
     </Grid>
 </Window>
