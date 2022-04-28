@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <Button Content="Import" HorizontalAlignment="Left" Margin="50,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Command="{Binding ImportCommand}" FontSize="16" RenderTransformOrigin="0.666,1.054" Grid.ColumnSpan="2"/>
         <Button Content="Export" HorizontalAlignment="Left" Margin="122,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Command="{Binding ExportCommand}" FontSize="14" RenderTransformOrigin="1.155,0.166" Grid.Column="1"/>
-        <Button Content="Add" HorizontalAlignment="Center" Margin="0,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Click="AddButton_Click" FontSize="14" Grid.Column="3"/>
+        <Button Content="Add" HorizontalAlignment="Center" Margin="317.667,419,158.333,0" VerticalAlignment="Top" Width="80" Height="26" Click="AddButton_Click" FontSize="14" Grid.Column="3"/>
         <DataGrid x:Name="dgMedication" Background="#DCF4F1" AlternationCount="2" AlternatingRowBackground="#DCF4F1"
                   HorizontalAlignment="Left" Height="320" Margin="50,66,0,0" VerticalAlignment="Top" Width="900" AutoGenerateColumns="False" ItemsSource="{Binding Array,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="4">
             <DataGrid.ContextMenu>
@@ -43,6 +43,7 @@
 
         </DataGrid>
         <Label Content="Search:" HorizontalAlignment="Left" Margin="162,19,0,0" VerticalAlignment="Top" Height="36" Width="68" FontSize="14" Grid.Column="1"/>
-        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="22" FontSize="14" TextChanged="tbSearch_TextChanged" Grid.ColumnSpan="2" Grid.Column="2"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Margin="0,26,0,0" TextWrapping="Wrap" Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="380" Height="22" FontSize="14" TextChanged="tbSearch_TextChanged" Grid.ColumnSpan="2" Grid.Column="2"/>
+        <Button Content="Export filtered" HorizontalAlignment="Left" Margin="16,418,0,0" VerticalAlignment="Top" Width="114" Height="26" Command="{Binding ExportFilterCommand}" FontSize="14" RenderTransformOrigin="1.155,0.166" Grid.Column="2"/>
     </Grid>
 </Window>

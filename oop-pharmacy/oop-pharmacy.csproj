@@ -91,6 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utilities.cs" />
     <Compile Include="CreateMedWindow.xaml.cs">
       <DependentUpon>CreateMedWindow.xaml</DependentUpon>
     </Compile>
@@ -143,9 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\medIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\back.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\background.jpg" />
