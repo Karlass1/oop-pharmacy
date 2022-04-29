@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace oop_pharmacy
@@ -24,7 +25,7 @@ namespace oop_pharmacy
 
         private string _FilterText = "";
         public string FilterText { get => _FilterText; set { _FilterText = value; GetFilterData(); } }
- 
+
         public Medication.MedDoseType DoseType { get; set; }
 
         public Medication.MedPackingType PackingType { get; set; }
@@ -47,21 +48,36 @@ namespace oop_pharmacy
 
         private void ImportCSV()
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "csv file (*.csv)|*.csv";
-            openFileDialog1.ShowDialog();
-            Pharmacy.GetPharmacy().MedList = Utilities.ImportData(openFileDialog1.FileName);
-            _array = new ObservableCollection<Medication>(Pharmacy.GetPharmacy().MedList);
-            OnPropertyChanged("Array");
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.InitialDirectory = "c:\\";
+                openFileDialog1.Filter = "csv file (*.csv)|*.csv";
+                openFileDialog1.ShowDialog();
+                Pharmacy.GetPharmacy().MedList = Utilities.ImportData(openFileDialog1.FileName);
+                _array = new ObservableCollection<Medication>(Pharmacy.GetPharmacy().MedList);
+                OnPropertyChanged("Array");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Import error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         private void ExportCSV()
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.InitialDirectory = "c:\\";
-            saveFileDialog1.Filter = "csv file (*.csv)|*.csv";
-            saveFileDialog1.ShowDialog();
-            Utilities.ExportData(saveFileDialog1.FileName, Pharmacy.GetPharmacy().MedList);
+
+            try
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = "c:\\";
+                saveFileDialog1.Filter = "csv file (*.csv)|*.csv";
+                saveFileDialog1.ShowDialog();
+                Utilities.ExportData(saveFileDialog1.FileName, Pharmacy.GetPharmacy().MedList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Export error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         private void AddMedication()
         {
@@ -93,11 +109,19 @@ namespace oop_pharmacy
         }
         private void ExportFilter()
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.InitialDirectory = "c:\\";
-            saveFileDialog1.Filter = "csv file (*.csv)|*.csv";
-            saveFileDialog1.ShowDialog();
-            Utilities.ExportData(saveFileDialog1.FileName, _array);
+            try
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = "c:\\";
+                saveFileDialog1.Filter = "csv file (*.csv)|*.csv";
+                saveFileDialog1.ShowDialog();
+                Utilities.ExportData(saveFileDialog1.FileName, _array);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Export error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
         }
         public ViewModel()
@@ -112,6 +136,6 @@ namespace oop_pharmacy
 
             ExportFilterCommand = new RelayCommand(ExportFilter);
         }
-        
+
     }
 }

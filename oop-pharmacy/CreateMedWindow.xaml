@@ -5,55 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oop_pharmacy"
         mc:Ignorable="d"
-        Title="Create Medicament" Height="530" Width="800">
-    <Grid Background="#DCF4F1" Margin="0,0,3.333,9" RenderTransformOrigin="0.452,0.498">
+        Title="Create Medicament" Height="533" Width="450" Icon="Images/medIcon.ico">
+    <Grid Background="#DCF4F1" Margin="0,0,0,0" RenderTransformOrigin="0.427,0.505">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="62*"/>
-            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
-        <Label Content="Name:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Active substance:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Active substance amount:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Dose:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Dose type:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="4" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Packing amount:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="5" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Packing type:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="6" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Manufacturer:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="7" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="Expiration date:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="8" Grid.Column="0"/>
-        <Label Content="Over the counter:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="9" Grid.Column="0" Margin="0,0.333,0,0" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Center" Height="31" TextWrapping="Wrap" Tag="Name" Text="{Binding Name}" VerticalAlignment="Top" Width="296" Grid.Row="0" Grid.Column="1" Foreground="Black"
- Margin="3,0,-7,0" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Center" Height="31" TextWrapping="Wrap" Tag="Active substance" Text="{Binding ActiveSubstance}" VerticalAlignment="Top" Width="296" Grid.Row="1" Grid.Column="1" Foreground="Black"
- Margin="3,0,-7,0" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Center" Height="31" TextWrapping="Wrap" Tag="Active substance amount" Text="{Binding ActiveSubstanceAmount}" VerticalAlignment="Top" Width="296" Grid.Row="2" Grid.Column="1" Foreground="Black"
- Margin="3,0,-7,0" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Center" Height="31" TextWrapping="Wrap" Tag="Dose" Text="{Binding Dose}" VerticalAlignment="Top" Width="296" Grid.Row="3" Grid.Column="1" Foreground="Black"
- Margin="3,0,-7,0" Grid.RowSpan="2"/>
-        <ComboBox HorizontalAlignment="Center" Height="31" SelectedIndex="0" SelectedValue="{Binding DoseType}" VerticalAlignment="Top" Width="296" Grid.Row="4" Grid.Column="1" Margin="3,0,-7,0" Grid.RowSpan="2" x:Name="ComboDose">
-        </ComboBox>
-        <TextBox HorizontalAlignment="Center" Height="31" TextWrapping="Wrap" Tag="Packing amount" Text="{Binding PackingAmount}" VerticalAlignment="Top" Width="296" Grid.Row="5" Grid.Column="1" Foreground="Black"
- Margin="3,0,-7,0" Grid.RowSpan="2"/>
-        <ComboBox HorizontalAlignment="Center" Height="31" SelectedIndex="0" SelectedValue="{Binding PackingType}" VerticalAlignment="Top" Width="296" Grid.Row="6" Grid.Column="1" Margin="3,0,-7,0" Grid.RowSpan="2" x:Name="ComboPacking">
-        </ComboBox>
-        <TextBox HorizontalAlignment="Center" Height="26" TextWrapping="Wrap" Tag="Manufacturer" Text="{Binding Manufacturer}" VerticalAlignment="Top" Width="296" Grid.Row="7" Grid.Column="1" Foreground="Black"
- Margin="43.333,0.333,34,0" Grid.RowSpan="2"/>
-        <Calendar HorizontalAlignment="Center" VerticalAlignment="Top" SelectedDate="{Binding ExpirationDate}" Grid.Row="8" Grid.Column="1" Height="168" Margin="105.333,10.333,88,0" Width="180"/>
-        <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding OverTheCounter}" Grid.Row="9" Grid.Column="1" Height="16" Margin="178,4.333,152,7.667" Width="16" RenderTransformOrigin="2.479,0.5"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="82,7.333,0,0" Grid.Row="10" VerticalAlignment="Top" Width="112" Click="CloseWindowClick" Grid.Column="0" Height="20"/>
-        <Button Content="Create" HorizontalAlignment="Left" Margin="173.333,7.333,0,0" Grid.Row="10" VerticalAlignment="Top" Width="112" Click="CloseWindowClick" Grid.Column="1" Height="20" Command="{Binding AddCommand}"/> 
+        <Label Content="Name:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="145" Grid.Column="0" FontSize="14"/>
+        <Label Content="Active substance:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="145" Grid.Row="1" Grid.Column="0" FontSize="14"/>
+        <Label Content="Active substance amount:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="171" Grid.Row="2" Grid.Column="0" FontSize="14"/>
+        <Label Content="Dose:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="145" Grid.Row="3" Grid.Column="0" FontSize="14"/>
+        <Label Content="Dose type:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="145" Grid.Row="4" Grid.Column="0" FontSize="14"/>
+        <Label Content="Packing amount:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" FontSize="14"/>
+        <Label Content="Packing type:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="145" Grid.Row="6" Grid.Column="0" FontSize="14"/>
+        <Label Content="Manufacturer:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Center" Width="145" Grid.Row="7" Grid.Column="0" FontSize="14"/>
+        <Label Content="Expiration date:" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="145" Grid.Row="8" Grid.Column="0" FontSize="14" Margin="0,88,0,0" Grid.RowSpan="2"/>
+        <Label Content="Over the counter:" HorizontalAlignment="Left" Width="145" Grid.Row="9" Grid.Column="0" Grid.RowSpan="3" FontSize="14" Margin="0,107,0,29"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Tag="Name" Text="{Binding Name}" VerticalAlignment="Center" Width="240" Grid.Column="1" Foreground="Black"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Tag="Active substance" Text="{Binding ActiveSubstance}" VerticalAlignment="Center" Width="240" Grid.Row="1" Grid.Column="1" Foreground="Black"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Tag="Active substance amount" Text="{Binding ActiveSubstanceAmount}" VerticalAlignment="Center" Width="240" Grid.Row="2" Grid.Column="1" Foreground="Black"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Tag="Dose" Text="{Binding Dose}" VerticalAlignment="Center" Width="240" Grid.Row="3" Grid.Column="1" Foreground="Black"/>
+        <ComboBox HorizontalAlignment="Center" Height="25" SelectedIndex="0" SelectedValue="{Binding DoseType}" VerticalAlignment="Center" Width="240" Grid.Row="4" Grid.Column="1" x:Name="ComboDose"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Tag="Packing amount" Text="{Binding PackingAmount}" VerticalAlignment="Center" Width="240" Grid.Row="5" Grid.Column="1" Foreground="Black"/>
+        <ComboBox HorizontalAlignment="Center" Height="25" SelectedIndex="0" SelectedValue="{Binding PackingType}" VerticalAlignment="Center" Width="240" Grid.Row="6" Grid.Column="1" x:Name="ComboPacking"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Tag="Manufacturer" Text="{Binding Manufacturer}" VerticalAlignment="Center" Width="240" Grid.Row="7" Grid.Column="1" Foreground="Black"/>
+        <Calendar HorizontalAlignment="Center" VerticalAlignment="Top" SelectedDate="{Binding ExpirationDate}" Grid.Row="8" Grid.Column="1" Height="168"  Width="180" RenderTransformOrigin="0.495,0.508" Margin="0,20,0,0" Grid.RowSpan="2"/>
+        <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding OverTheCounter}" Grid.Row="10" Grid.Column="1" Height="16" RenderTransformOrigin="2.479,0.5"/>
+        <Button Content="Cancel" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="11" Width="112" Click="CloseWindowClick" Height="20"/>
+        <Button Content="Create" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="11"  Width="112" Click="CloseWindowClick" Grid.Column="1" Height="20" Command="{Binding AddCommand}"/>
     </Grid>
 </Window>

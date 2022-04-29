@@ -38,13 +38,5 @@ namespace oop_pharmacy
             createWin.Show();
         }
 
-        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var tbx = sender as TextBox;
-            if (tbx.Text != "")
-            {
-                //    Pharmacy.FilterData(tbx.Text);
-            }
-        }
     }
 }

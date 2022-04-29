@@ -24,10 +24,10 @@ namespace oop_pharmacy
                 return csv.GetRecords<Medication>().ToList();
 
             }
-
         }
         public static void ExportData(string path, IEnumerable<Medication> collection)
         {
+
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
                 HasHeaderRecord = false,
@@ -37,6 +37,7 @@ namespace oop_pharmacy
             {
                 csv.WriteRecords(collection);
             }
+
         }
     }
 }
