@@ -84,6 +84,16 @@ namespace oop_pharmacy
             Guid Id = Guid.NewGuid();
             Medication newMed = new Medication(Id, Dose, Name, ActiveSubstance, ActiveSubstanceAmount, PackingAmount, Manufacturer, ExpirationDate, OverTheCounter, DoseType, PackingType);
             Pharmacy.GetPharmacy().MedList.Add(newMed);
+            Dose = 0;
+            Name = "";
+            ActiveSubstance = "";
+            ActiveSubstanceAmount = 0;
+            PackingAmount = 0;
+            Manufacturer = "";
+            OverTheCounter = false;
+            ExpirationDate = DateTime.Today;
+            DoseType = Medication.MedDoseType.ml;
+            PackingType = Medication.MedPackingType.ml;
             GetFilterData();
 
         }
