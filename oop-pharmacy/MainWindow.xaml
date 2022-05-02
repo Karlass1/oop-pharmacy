@@ -20,8 +20,7 @@
         <Button Content="Import" HorizontalAlignment="Left" Margin="50,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Command="{Binding ImportCommand}" FontSize="16" RenderTransformOrigin="0.666,1.054" Grid.ColumnSpan="2"/>
         <Button Content="Export" HorizontalAlignment="Left" Margin="122,419,0,0" VerticalAlignment="Top" Width="80" Height="26" Command="{Binding ExportCommand}" FontSize="14" RenderTransformOrigin="1.155,0.166" Grid.Column="1"/>
         <Button Content="Add" HorizontalAlignment="Center" Margin="317.667,419,158.333,0" VerticalAlignment="Top" Width="80" Height="26" Click="AddButton_Click" FontSize="14" Grid.Column="3"/>
-        <DataGrid x:Name="dgMedication" Background="#DCF4F1" AlternationCount="2" AlternatingRowBackground="#DCF4F1"
-                  HorizontalAlignment="Left" Height="320" Margin="50,66,0,0" VerticalAlignment="Top" Width="900" AutoGenerateColumns="False" ItemsSource="{Binding Array,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="4">
+        <DataGrid x:Name="dgMedication" Background="#DCF4F1" AlternationCount="2" AlternatingRowBackground="#DCF4F1" Margin="50,66,50,98" AutoGenerateColumns="False" ItemsSource="{Binding Array,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="4">
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Delete from database" Command="{Binding DeleteCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=PlacementTarget.SelectedItem}"/>

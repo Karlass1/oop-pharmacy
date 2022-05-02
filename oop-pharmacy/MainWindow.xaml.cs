@@ -35,6 +35,7 @@ namespace oop_pharmacy
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             CreateMedWindow createWin = new CreateMedWindow();
+            createWin.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             createWin.Show();
         }
 

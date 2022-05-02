@@ -1,5 +1,15 @@
-da12d985-50d8-4a30-93cd-d41ffae496a1,25,as,expected,30,30,wtf,06/07/2005 00:00:00,False,ml,pcs
-f8518f9a-1c7e-421a-a288-1a4b33a9bd85,30,Brufen,ibuprofenum,400,4,Mylan,06/09/2022 00:00:00,False,pcs,pcs
-b4743b57-e377-4f98-b439-51ba14c829a4,12,sdsd,nee,41,5,Mylan,06/05/2022 00:00:00,True,pcs,pcs
-2d9c529e-766c-4245-ab7d-1f1318c9edb6,5,ytyh,dfdf,14,45,Mylan,04/30/2022 00:00:00,True,ml,pcs
-6763e6e1-db38-4292-a9fe-5a3baee518c4,5,Leko3,45,11,45,Mylan,06/05/2022 00:00:00,True,ml,pcs
+da12d985-50d8-4a30-93cd-d41ffae496a1,1,Fenistil,Dimetindeni maleas,30,40,Fenistil,06/07/2005 00:00:00,False,ml,ml
+f8518f9a-1c7e-421a-a288-1a4b33a9bd85,2,Brufen,ibuprofenum,400,30,Mylan,06/09/2022 00:00:00,False,pcs,pcs
+b4743b57-e377-4f98-b439-51ba14c829a4,3,Zyrtec,cetirizin-dihydrochlorid,10,40,BRAINE L`ALLEUD,06/05/2022 00:00:00,True,pcs,pcs
+2d9c529e-766c-4245-ab7d-1f1318c9edb6,1,Železo,Železo (Fe),14,60,"NATURVITA ",04/30/2022 00:00:00,True,pcs,pcs
+6763e6e1-db38-4292-a9fe-5a3baee518c4,2,Vitamin D3 Forte,Vitamin D3,1000,90,Revital,06/05/2022 00:00:00,True,pcs,pcs
+5601d17e-5537-4149-9e3b-252ae8f92266,2,Stoptussin,butamirati citras,4,30,Teva Pharmaceuticals,02/25/2023 00:00:00,False,ml,ml
+146c0579-5a19-4d17-9d7d-12ba8b9ad5a6,5,Olynth HA,xylometazolin-hydrochlorid,1,10,Ursapharm,09/17/2022 00:00:00,False,ml,ml
+288a3ad0-468b-4191-a359-f3bf07c07955,3,Sinupret,Gentianae radix,12,20,Bionarica,09/08/2022 00:00:00,True,pcs,pcs
+31780990-a6f2-462d-b9b6-e8135b483fed,3,Kinedryl,moxastini teoclas,25,30,Noventis S.R.O.,09/23/2022 00:00:00,False,pcs,pcs
+4e0b281d-8250-40e1-9213-5b7aab699ad8,3,Smecta,diosmectitum,3,10,Beaufour Ipsen,07/15/2022 00:00:00,False,pcs,pcs
+848f3a58-c83a-428e-b0b1-1682e6afee5b,1,"Claritine ",loratadinum,10,30,Schering gmbh und co,08/05/2022 00:00:00,False,pcs,pcs
+9aa1ddeb-a6f3-4cc8-adb3-2b61f9449b8e,2,Gingio,Ginkgo extractum,120,120,Salutas Pharma,02/09/2024 00:00:00,True,pcs,pcs
+ddbfbd75-d181-447e-9166-e7ede29da791,4,Magne B6,magnesii lactas dihydricus,470,100,Sanofi Aventis,01/06/2023 00:00:00,False,pcs,pcs
+2ecb2f26-d0cb-4c2d-a1dd-6bbf76881963,2,Paralen,paracetamolum,500,24,Zentiva A.S.,12/02/2022 00:00:00,False,pcs,pcs
+9600d8a6-df07-49cd-a0f1-242147ee5516,2,Aspirin C,acetylsalicylicum,400,20,Bayer,01/11/2024 00:00:00,True,pcs,pcs
